@@ -158,8 +158,8 @@ def get_specfic_data(celeba_path, attr_txt_path, attr_idx, flag=1, expect_total=
 if __name__ == '__main__':
 
     # 指定路径
-    celeba_path = r'F:\ww\CELEBA\img_align_celeba'
-    attr_txt_path = r"F:\ww\CELEBA\list_attr_celeba.txt"
+    celeba_path = r'img_align_celeba'
+    attr_txt_path = r"list_attr_celeba.txt"
 
     # 建立属性列表
     build_attr_list(attr_txt_path)
