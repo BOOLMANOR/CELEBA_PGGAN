@@ -190,7 +190,6 @@ def PGGAN(  id ,     # PG模型序号
             # 格式修正
             minibatch = np.reshape(minibatch,[-1,res,res,3]).astype(np.float32)
             # 数据集显示
-            # us.CV2_IMSHOW_NHWC_RAMDOM(minibatch, 1, 9, 3, 3, 'minibatch', 0)
 
             # 数据集过度处理
             if isTransit:
@@ -216,7 +215,6 @@ def PGGAN(  id ,     # PG模型序号
             # recording training_products
             z = np.random.normal(size=[9, latents_size])
             gen_samples = sess.run(fake_images, feed_dict={latents: z})
-            us.CV2_IMSHOW_NHWC_RAMDOM((gen_samples+1)/2, 1, 9, 3, 3, 'GEN', 10)
 
             # 打印
             print('level:%d(%dx%d)..' % (level, res, res),
