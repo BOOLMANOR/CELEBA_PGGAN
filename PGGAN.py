@@ -215,7 +215,9 @@ def PGGAN(  id ,     # PG模型序号
             # recording training_products
             z = np.random.normal(size=[9, latents_size])
             gen_samples = sess.run(fake_images, feed_dict={latents: z})
-            us.CV2_IMSHOW_NHWC_RAMDOM((gen_samples+1)/2, 1, 9, 3, 3, 'GEN', 10)
+            if sess.run(train_steps) % 3000 == 0:
+                us.CV2_IMSHOW_NHWC_RAMDOM((gen_samples+1)/2, 1, 9, 3, 3, 'level:%d(%d)step:%d.png'% (level, res,(sess.run(train_steps))), 10)
+
 
             # 打印
             print('level:%d(%dx%d)..' % (level, res, res),
