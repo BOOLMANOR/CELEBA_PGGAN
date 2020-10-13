@@ -296,9 +296,9 @@ if __name__ == '__main__':
 
     # progressive growing
     time0 = time.time()  # 开始计时
-    # PGGAN(0,latents_size,batch_size,  lowest, highest, level=2, isTransit=False,epochs=epochs,data_size=data_size)
-    # PGGAN(1,latents_size, batch_size, lowest, highest, level=3, isTransit=True, epochs=epochs, data_size=data_size)
-    # PGGAN(2,latents_size, batch_size, lowest, highest, level=3, isTransit=False, epochs=epochs, data_size=data_size)
+    PGGAN(0,latents_size,batch_size,  lowest, highest, level=2, isTransit=False,epochs=epochs,data_size=data_size)
+    PGGAN(1,latents_size, batch_size, lowest, highest, level=3, isTransit=True, epochs=epochs, data_size=data_size)
+    PGGAN(2,latents_size, batch_size, lowest, highest, level=3, isTransit=False, epochs=epochs, data_size=data_size)
     PGGAN(3,latents_size, batch_size, lowest, highest, level=4, isTransit=True, epochs=epochs, data_size=data_size)
     PGGAN(4,latents_size, batch_size, lowest, highest, level=4, isTransit=False, epochs=epochs, data_size=data_size)
     PGGAN(5,latents_size, batch_size, lowest, highest, level=5, isTransit=True, epochs=epochs, data_size=data_size)
