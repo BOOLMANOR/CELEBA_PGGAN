@@ -73,8 +73,8 @@ def sliced_wasserstein_distance(A, B, dir_repeats, dirs_per_repeat):
 if __name__ == '__main__':
 
     # 指定路径
-    celeba_path = 'F:\ww\CELEBA\img_align_celeba'
-    attr_txt_path = r"F:\ww\CELEBA\list_attr_celeba.txt"
+    celeba_path = 'img_align_celeba'
+    attr_txt_path = r"list_attr_celeba.txt"
 
     # 获取数据集
     batch = CSP.get_data(celeba_path, attr_txt_path, 9, 1,expect_total=8192).astype(np.float32)#2^13
