@@ -26,9 +26,7 @@ def CV2_ALL_CLOSE():
 
 # 显示单张
 def CV2_IMSHOW_HWC(img, title='img',delay=0):
-    cv2.namedWindow(title, flags=cv2.WINDOW_NORMAL)
-    cv2.imshow(title, img)
-    cv2.waitKey(delay)
+    cv2.imwrite('./res/%s'%title, img)
 
 # 显示多张
 # define batch showing using CV2
